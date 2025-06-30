@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "wait-api",
+            "type": "shell",
+            "command": "wait-server.sh",
+            "args": [
+                "http://localhost:5092/swagger/index.html"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "wait-ui",
+            "type": "shell",
+            "command": "wait-server.sh",
+            "args": [
+                "http://localhost:5101"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

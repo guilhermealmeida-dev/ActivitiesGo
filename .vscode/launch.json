@@ -1,0 +1,52 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: API Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/ActivitiesGo.API/ActivitiesGo.API.csproj"
+        },
+        {
+            "name": "C#: UI Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/ActivitiesGo.UI/ActivitiesGo.UI.csproj",
+        },
+        {
+            "name": "Launch Chrome API",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:5092/swagger/index.html",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "wait-api"
+        },
+        {
+            "name": "Launch Chrome UI",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:5101",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "wait-ui"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "API + Chome",
+            "configurations": [
+                "C#: API Debug",
+                "Launch Chrome API",
+            ],
+        },
+        {
+            "name": "UI + Chome",
+            "configurations": [
+                "C#: UI Debug",
+                "Launch Chrome UI"
+            ]
+        }
+    ]
+}
