@@ -17,7 +17,7 @@
             "projectPath": "${workspaceFolder}/ActivitiesGo.UI/ActivitiesGo.UI.csproj",
         },
         {
-            "name": "Launch Chrome API",
+            "name": "Launch Browser API",
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:5092/swagger/index.html",
@@ -25,7 +25,7 @@
             "preLaunchTask": "wait-api"
         },
         {
-            "name": "Launch Chrome UI",
+            "name": "Launch Browser UI",
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:5101",
@@ -38,14 +38,14 @@
             "name": "API + Chome",
             "configurations": [
                 "C#: API Debug",
-                "Launch Chrome API",
+                "Launch Browser API",
             ],
         },
         {
             "name": "UI + Chome",
             "configurations": [
                 "C#: UI Debug",
-                "Launch Chrome UI"
+                "Launch Browser UI"
             ]
         }
     ]

@@ -1,3 +1,6 @@
+using ActivitiesGo.InfraData.Context;
+using Microsoft.EntityFrameworkCore;
+
 internal class Program
 {
     private static void Main(string[] args)
@@ -12,8 +15,13 @@ internal class Program
         });
 
         builder.Services.AddEndpointsApiExplorer();
-        
+
         builder.Services.AddSwaggerGen();
+
+        builder.Services.AddDbContext<AplicationContext>(options =>
+        {
+            options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+        });
 
         var app = builder.Build();
 
