@@ -8,4 +8,5 @@ public class ActivityAddresse : EntityBase
     public Guid ActivityId { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
+    public Activity Activity { get; set; }
 }

@@ -3,7 +3,7 @@ using ActivitiesGo.Domain.Entities.Base;
 
 namespace ActivitiesGo.Domain.Entities;
 
-public class Activity:EntityBase
+public class Activity : EntityBase
 {
     public string Title { get; set; }
     public string Description { get; set; }
@@ -15,5 +15,9 @@ public class Activity:EntityBase
     public DateTime CompletedAt { get; set; }
     public bool Private { get; set; }
     public Guid CreatorId { get; set; }
+    public User Creator { get; set; }
+    public ICollection<ActivityParticipant>? Participants { get; set; }
+    public ActivityType Type { get; set; }
+    public ActivityAddresse Addresse { get; set; }
 
 }

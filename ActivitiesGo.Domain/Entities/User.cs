@@ -11,5 +11,9 @@ public class User
     public int XP { get; set; }
     public int Level { get; set; }
     public DateTime? DeleteAt { get; set; }
+    public ICollection<UserAchievement>? Achievements { get; set; }
+    public ICollection<Activity>? Activities { get; set; }
+    public ICollection<Preference>? Preferences { get; set; }
+    public ICollection<ActivityParticipant>? ActivitiesParticipated { get; set; }
 
 }

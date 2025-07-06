@@ -7,4 +7,6 @@ public class Achievement : EntityBase
 {
     public string Name { get; set; }
     public string Criterion { get; set; }
+    public ICollection<UserAchievement> Users { get; set; }
+
 }
