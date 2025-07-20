@@ -5,8 +5,8 @@ namespace ActivitiesGo.Domain.Entities;
 
 public class Achievement : EntityBase
 {
-    public string Name { get; set; }
-    public string Criterion { get; set; }
-    public ICollection<UserAchievement> Users { get; set; }
-
+    public required string Name { get; set; }
+    public required string Criterion { get; set; }
+    
+    public ICollection<User> Users { get; set; } = [];
 }

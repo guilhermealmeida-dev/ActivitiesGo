@@ -5,10 +5,12 @@ namespace ActivitiesGo.Domain.Entities;
 
 public class ActivityParticipant : EntityBase
 {
-    public Guid ActivityId { get; set; }
-    public Guid UserId { get; set; }
     public bool Apreved { get; set; }
     public DateTime ConfirmedAt { get; set; }
-    public User User { get; set; }
-    public Activity Activity { get; set; }
+
+    public required Guid ActivityId { get; set; }
+    public required Guid UserId { get; set; }
+
+    public required User User { get; set; }
+    public required Activity Activity { get; set; }
 }

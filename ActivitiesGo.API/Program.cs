@@ -20,7 +20,10 @@ internal class Program
 
         builder.Services.AddDbContext<AplicationContext>(options =>
         {
-            options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+            options.UseSqlServer(
+                builder.Configuration.GetConnectionString("Default"),
+                o => o.MigrationsAssembly("ActivitiesGo.InfraData")
+            );
         });
 
         var app = builder.Build();

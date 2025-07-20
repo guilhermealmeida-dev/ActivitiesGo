@@ -4,8 +4,10 @@ namespace ActivitiesGo.Domain.Entities;
 
 public class ActivityType : EntityBase
 {
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public string Image { get; set; }
-    public ICollection<Activity> Activities { get; set; }
+    public required string Name { get; set; }
+    public required string Description { get; set; }
+    public required string Image { get; set; }
+
+    public ICollection<Activity> Activities { get; set; } = [];
+    public ICollection<User> Users { get; set; } = [];
 }
