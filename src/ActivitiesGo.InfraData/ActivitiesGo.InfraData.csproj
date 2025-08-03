@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../ActivitiesGo.Domain/ActivitiesGo.Domain.csproj" />
+    <ProjectReference Include="../ActivitiesGo.Shared/ActivitiesGo.Shared.csproj" />
   </ItemGroup>
 
 </Project>

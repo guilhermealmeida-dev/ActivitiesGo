@@ -17,7 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../ActivitiesGo.Aplication/ActivitiesGo.Aplication.csproj" />
     <ProjectReference Include="../ActivitiesGo.InfraData/ActivitiesGo.InfraData.csproj" />
+    <ProjectReference Include="../ActivitiesGo.Shared/ActivitiesGo.Shared.csproj" />
   </ItemGroup>
 
 </Project>

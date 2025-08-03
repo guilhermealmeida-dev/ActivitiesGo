@@ -8,13 +8,13 @@
             "name": "C#: API Debug",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/ActivitiesGo.API/ActivitiesGo.API.csproj"
+            "projectPath": "${workspaceFolder}/src/ActivitiesGo.API/ActivitiesGo.API.csproj"
         },
         {
             "name": "C#: UI Debug",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/ActivitiesGo.UI/ActivitiesGo.UI.csproj",
+            "projectPath": "${workspaceFolder}/src/ActivitiesGo.UI/ActivitiesGo.UI.csproj",
         },
         {
             "name": "Launch Browser API",
