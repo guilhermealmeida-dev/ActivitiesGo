@@ -6,6 +6,6 @@ namespace ActivitiesGo.Domain.Interfaces;
 
 public interface IUserRepository : IRepository<User>
 {
-    User? FindByEmail(string email);
-    User? FindByCPF(string cpf);
+    Task<User?> FindByEmailAsync(string email);
+    Task<User?> FindByCPFAsync(string cpf);
 }

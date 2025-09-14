@@ -11,6 +11,7 @@ public static class DependencyInjection
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
         services.AddScoped<IAuthService,AuthService>();
+        services.AddScoped<IJwtTokenService,JwtTokenService>();
         return services;
     }
     public static IServiceCollection AddRepositories(this IServiceCollection services)

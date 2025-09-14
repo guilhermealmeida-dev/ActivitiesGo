@@ -45,7 +45,7 @@ public class ExceptionMiddleware
         {
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             context.Response.ContentType = "application/json";
-            var response = new { error = "Erro inesperado. Tente novamente mais tarde." };
+            var response = new { error = "Erro inesperado." };
 
             await context.Response.WriteAsync(JsonSerializer.Serialize(response));
         }

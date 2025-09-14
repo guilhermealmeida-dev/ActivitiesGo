@@ -13,6 +13,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.17" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
@@ -20,6 +22,11 @@
     <ProjectReference Include="../ActivitiesGo.Aplication/ActivitiesGo.Aplication.csproj" />
     <ProjectReference Include="../ActivitiesGo.InfraData/ActivitiesGo.InfraData.csproj" />
     <ProjectReference Include="../ActivitiesGo.Shared/ActivitiesGo.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot/" />
+    <Folder Include="wwwroot/images/" />
   </ItemGroup>
 
 </Project>

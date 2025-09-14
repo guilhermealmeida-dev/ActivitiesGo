@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace ActivitiesGo.Shared.Utils;
+namespace ActivitiesGo.API.Utils;
 
 public static class ValidationUtils
 {
@@ -9,7 +9,7 @@ public static class ValidationUtils
         return modelState
             .Where(x => x.Value != null && x.Value.Errors.Any())
             .ToDictionary(
-                kvp => kvp.Key,
+                kvp => char.ToLowerInvariant(kvp.Key[0]) + kvp.Key.Substring(1),
                 kvp => kvp.Value!.Errors.Select(e => e.ErrorMessage).ToArray()
             );
     }

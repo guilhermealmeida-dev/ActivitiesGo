@@ -1,6 +1,7 @@
 using ActivitiesGo.API.Configuration;
 using ActivitiesGo.API.Middlewares;
 using ActivitiesGo.InfraData.Context;
+using ActivitiesGo.Shared.Config;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +18,7 @@ internal class Program
         });
 
         // Injeção de dependencias
+        builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
         builder.Services.AddServices();
         builder.Services.AddRepositories();
 
@@ -44,6 +46,7 @@ internal class Program
             );
         });
 
+
         var app = builder.Build();
 
         app.UseMiddleware<ExceptionMiddleware>();
@@ -60,6 +63,8 @@ internal class Program
         app.UseAuthorization();
 
         app.MapControllers();
+
+        app.UseStaticFiles();
 
         app.Run();
     }

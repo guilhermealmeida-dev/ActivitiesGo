@@ -31,15 +31,15 @@ public class UserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
-    public User? FindByCPF(string cpf)
+    public Task<User?> FindByCPFAsync(string cpf)
     {
-        var user = _context.Users.FirstOrDefault(user=>user.Email == cpf);
+        var user = _context.Users.FirstOrDefaultAsync(user=>user.Email == cpf);
         return user;
     }
 
-    public User? FindByEmail(string email)
+    public Task<User?> FindByEmailAsync(string email)
     {
-        var user = _context.Users.FirstOrDefault(user=>user.Email == email);
+        var user = _context.Users.FirstOrDefaultAsync(user=>user.Email == email);
         return user;
     }
 
