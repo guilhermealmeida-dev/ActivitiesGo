@@ -3,6 +3,7 @@ using ActivitiesGo.Aplication.DTOs.Auth;
 using ActivitiesGo.Aplication.DTOs.User;
 using ActivitiesGo.Aplication.Interfaces;
 using ActivitiesGo.Shared.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace ActivitiesGo.API.Controllers
 {
@@ -35,6 +36,8 @@ namespace ActivitiesGo.API.Controllers
         }
 
         [HttpPost("sign-in")]
+        [AllowAnonymous]
+
         public async Task<IActionResult> SignIn(LoginDto dto)
         {
 

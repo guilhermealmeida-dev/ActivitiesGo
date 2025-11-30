@@ -12,7 +12,7 @@ public class JwtTokenService : IJwtTokenService
 {
     private readonly string _secret;
     public JwtTokenService(IOptions<AppSettings> options)
-    {
+    {        
         _secret = options.Value.JwtKey;
     }
 

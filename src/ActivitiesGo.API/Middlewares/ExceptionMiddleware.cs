@@ -41,13 +41,20 @@ public class ExceptionMiddleware
 
             await context.Response.WriteAsync(JsonSerializer.Serialize(response));
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
             context.Response.ContentType = "application/json";
-            var response = new { error = "Erro inesperado." };
+
+            var response = new
+            {
+                error = ex.Message,
+                exceptionType = ex.GetType().Name,
+                stackTrace = ex.StackTrace
+            };
 
             await context.Response.WriteAsync(JsonSerializer.Serialize(response));
         }
+
     }
 }

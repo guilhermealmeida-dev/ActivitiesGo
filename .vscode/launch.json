@@ -8,7 +8,7 @@
             "name": "C#: API Debug",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/src/ActivitiesGo.API/ActivitiesGo.API.csproj"
+            "projectPath": "${workspaceFolder}/src/ActivitiesGo.API/ActivitiesGo.API.csproj",
         },
         {
             "name": "C#: UI Debug",

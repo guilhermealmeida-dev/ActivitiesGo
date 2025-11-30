@@ -33,14 +33,16 @@ public class UserRepository : IUserRepository
 
     public Task<User?> FindByCPFAsync(string cpf)
     {
-        var user = _context.Users.FirstOrDefaultAsync(user=>user.Email == cpf);
-        return user;
+        return (from user in _context.Users
+                where user.CPF == cpf
+                select user).FirstOrDefaultAsync();
     }
 
     public Task<User?> FindByEmailAsync(string email)
     {
-        var user = _context.Users.FirstOrDefaultAsync(user=>user.Email == email);
-        return user;
+        return (from user in _context.Users
+                where user.Email == email
+                select user).FirstOrDefaultAsync();
     }
 
     public Task<User> FindByIdAsync(Guid Id)
